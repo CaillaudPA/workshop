@@ -21,6 +21,14 @@ angular.module('starter.controllers', [])
   $scope.chat = Chats.get($stateParams.chatId);
 })
 
+.controller('FdpCtrl', function($scope, $stateParams, Chats) {
+  
+})
+
+.controller('LoginCtrl', function($scope, $stateParams){
+  console.log('ok');
+})
+
 .controller('AccountCtrl', function($scope) {
   $scope.settings = {
     enableFriends: true
