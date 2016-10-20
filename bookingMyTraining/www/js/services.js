@@ -79,7 +79,7 @@ angular.module('starter.services', [])
     email: 'robin.cornec@kepler-solutions.fr',
     password:'azerty'
   }, {
-    id: '3',
+    id: 3,
     nom: 'AGM Informatique',
     titre: 'Analyste programmeur',
     nomPDG: 'Joseph ROUINSARD',
@@ -93,29 +93,17 @@ angular.module('starter.services', [])
     email: 'agm@agm-informatique.com',
     password:'agmInfo'
   }, {
-    id: 0,
-    nom: 'Développeur web junior',
-    nomPDG: 'You on your way?',
-    adresse: 'img/ben.png',
-    logo: 'img/ben.png',
-    url: 'www..com',
-    siret: '',
-    nbemployes: '',
-    managementSocial: '',
-    email: 'entreprise@',
-    password:''
-  }, {
-    id: 0,
-    nom: 'Développeur web junior',
-    nomPDG: 'You on your way?',
-    adresse: 'img/ben.png',
-    logo: 'img/ben.png',
-    url: 'www..com',
-    siret: '',
-    nbemployes: '',
-    managementSocial: '',
-    email: 'entreprise@',
-    password:''
+    id: 4,
+    nom: 'Technicien HPC',
+    nomPDG: 'Rémi Revire',
+    adresse: '357 Avenue du Général Patton, 49000 Angers',
+    logo: 'https://upload.wikimedia.org/wikipedia/en/3/36/Group_Bull_logo.png',
+    url: 'http://www.bull.com/fr/front',
+    siret: '64205873903320',
+    nbemployes: '300',
+    managementSocial: 'peut-être...',
+    email: 'entreprise@atos.net',
+    password:'atos2016'
   }];
     return {
     all: function() {
