@@ -1,6 +1,7 @@
 <ion-view view-title="Entreprises">
   <ion-content>
     <ion-list>
+
       <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="entreprise in entreprises" type="item-text-wrap" href="#/tab/entreprises/{{entreprise.id}}">
         <img ng-src="{{entreprise.logo}}">
         <h2>{{entreprise.nom}}</h2>
@@ -13,12 +14,13 @@
             {{entreprise.url}} <br>
             {{entreprise.email}}  <br>          
         </p>
+
         <i class="icon ion-chevron-right icon-accessory"></i>
 
-        <ion-option-button class="button-assertive" ng-click="remove(annonce)">
+        <ion-option-button class="button-assertive" ng-click="remove()">
           Modifier description
         </ion-option-button>
-        <ion-option-button class="button-assertive" ng-click="add(annonce)">
+        <ion-option-button class="button-assertive" ng-click="add()">
           Ajouter annonce
         </ion-option-button>
       </ion-item>

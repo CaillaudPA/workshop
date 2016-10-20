@@ -1,3 +1,4 @@
+
 angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope) {})
@@ -37,8 +38,35 @@ angular.module('starter.controllers', [])
   console.log('ok');
 })
 
-.controller("AnnonceCtrl", function($scope, $stateParams){
 
+.controller("AnnonceCtrl", function($scope, $stateParams){
+    $scope.annonces = [{
+    id: 0,
+    name: 'Thales',
+    lastText: 'Stage de 2 mois / administrateur réseau',
+    face: 'img/thales.jpg'
+  }, {
+    id: 1,
+    name: 'Capgemini',
+    lastText: 'Stage de 6 mois / développement mobile',
+    face: 'img/capgemini.jpg'
+  }, {
+    id: 2,
+    name: 'Systeme U',
+    lastText: 'Stage de 6 mois / système',
+    face: 'img/systeme_u.jpg'
+  }, {
+    id: 3,
+    name: 'Système U',
+    lastText: 'Stage de 6 mois / sécurité',
+    face: 'img/systeme_u.jpg'
+  }, {
+    id: 4,
+    name: 'Google',
+    lastText: 'Stage de 3 mois / développement web',
+    face: 'img/google.jpg'
+  }];
+    //Annonces.all();
 })
 
 .controller('AccountCtrl', function($scope) {
