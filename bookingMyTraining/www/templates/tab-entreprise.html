@@ -1,10 +1,18 @@
 <ion-view view-title="Entreprises">
   <ion-content>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="entreprise in entreprises" type="item-text-wrap" href="#/tab/annonces/{{annonce.id}}">
-        <img ng-src="{{entreprise.face}}">
-        <h2>{{entreprise.name}}</h2>
-        <p>{{entreprise.lastText}}</p>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="entreprise in entreprises" type="item-text-wrap" href="#/tab/entreprises/{{entreprise.id}}">
+        <img ng-src="{{entreprise.logo}}">
+        <h2>{{entreprise.nom}}</h2>
+        <p>
+            {{entreprise.nomPDG}} <br>
+            {{entreprise.adresse}} <br>
+            {{entreprise.nbemployes}} <br>
+            {{entreprise.managementsocial}} <br>
+            {{entreprise.siret}} <br>
+            {{entreprise.url}} <br>
+            {{entreprise.email}}  <br>          
+        </p>
         <i class="icon ion-chevron-right icon-accessory"></i>
 
         <ion-option-button class="button-assertive" ng-click="remove(annonce)">
