@@ -52,12 +52,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
-  .state('tab.chats', {
-      url: '/chats',
+  .state('tab.annonces', {
+      url: '/annonces',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
+        'tab-annonces': {
+          templateUrl: 'templates/tab-annonces.html',
+          controller: 'AnnonceCtrl'
         }
       }
     })
@@ -91,4 +91,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/login');
 
+});
+
+  var MongoClient = require('mongodb').MongoClient
+    , assert = require('assert');
+
+  // Connection URL
+  var url = 'mongodb://localhost:27017/myproject';
+
+  // Use connect method to connect to the server
+  MongoClient.connect(url, function(err, db) {
+    assert.equal(null, err);
+    console.log("Connected successfully to server");
+
+    db.close();
 });
