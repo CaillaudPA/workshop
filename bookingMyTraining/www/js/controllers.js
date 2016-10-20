@@ -1,8 +1,6 @@
 
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
-
 // Suppression d'une annonce
 .controller('AnnoncesSuppr', function($scope, Annonces) {
   // With the new view caching in Ionic, Controllers are only called
