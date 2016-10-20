@@ -1,0 +1,19 @@
+<ion-view view-title="Annonces">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="annonce in annoncess" type="item-text-wrap" href="#/tab/annonces/{{annonce.id}}">
+        <img ng-src="{{entreprise.face}}">
+        <h2>{{annonce.name}}</h2>
+        <p>{{annonce.lastText}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(annonce)">
+          Supprimer l'annonce
+        </ion-option-button>
+        <ion-option-button class="button-assertive" ng-click="add(annonce)">
+          Ajouter une annonce
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

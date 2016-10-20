@@ -2,7 +2,8 @@ angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope) {})
 
-.controller('ChatsCtrl', function($scope, Chats) {
+// Suppression d'une annonce
+.controller('AnnoncesSuppr', function($scope, Annonces) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -11,18 +12,25 @@ angular.module('starter.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
+  $scope.annonces = Annonces.all();
+  $scope.remove = function(annonce) {
+    Annonces.remove(annonce);
   };
 })
-
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
+// Ajout d'une annonce
+.controller('AnnoncesAjout', function($scope, Annonces) {
+  $scope.annonces = Annonces.all();
+  $scope.add = function(annonce) {
+    Annonces.add(annonce);
+  };
 })
-
-.controller('FdpCtrl', function($scope, $stateParams, Chats) {
-  
+// Détails sur l'annonce
+.controller('AnnonceDetailCtrl', function($scope, $stateParams, Annonces) {
+  $scope.annonce = Annonces.get($stateParams.annonceId);
+})
+// Détails sur l'entreprise
+.controller('EntrepriseDetailCtrl', function($scope, $stateParams, Entreprises) {
+  $scope.entreprise = Entreprises.get($stateParams.entrepriseId);
 })
 
 .controller('LoginCtrl', function($scope, $stateParams){
