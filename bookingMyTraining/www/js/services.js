@@ -52,7 +52,7 @@ angular.module('starter.services', [])
 
 .factory('Entreprises', function(){
   var entreprises = [{
-    id: 1,
+    id: 0,
     nom: 'Orange',
     titre: 'Développeur JAVA',
     nomPDG: 'Stephane Richard',
@@ -65,7 +65,7 @@ angular.module('starter.services', [])
     email: 'contact@orange.com',
     password:'Orange2016'
   }, {
-    id: 2,
+    id: 1,
     nom: 'KEPLER SOLUTIONS',
     titre: 'Développeur Symfony',
     nomPDG: 'Alaim DOMGUEP',
@@ -79,7 +79,7 @@ angular.module('starter.services', [])
     email: 'robin.cornec@kepler-solutions.fr',
     password:'azerty'
   }, {
-    id: 3,
+    id: 2,
     nom: 'AGM Informatique',
     titre: 'Analyste programmeur',
     nomPDG: 'Joseph ROUINSARD',
@@ -93,7 +93,7 @@ angular.module('starter.services', [])
     email: 'agm@agm-informatique.com',
     password:'agmInfo'
   }, {
-    id: 4,
+    id: 3,
     nom: 'Technicien HPC',
     nomPDG: 'Rémi Revire',
     adresse: '357 Avenue du Général Patton, 49000 Angers',
@@ -101,7 +101,7 @@ angular.module('starter.services', [])
     url: 'http://www.bull.com/fr/front',
     siret: '64205873903320',
     nbemployes: '300',
-    managementSocial: 'peut-être...',
+    managementSocial: 'oui',
     email: 'entreprise@atos.net',
     password:'atos2016'
   }];
@@ -124,18 +124,30 @@ angular.module('starter.services', [])
 })
 
 .factory('Commentaire', function(){
-    var commentaire = [{
-        id:'',
-        noteGenerale:'',
-        noteStage: '',
-        noteAmbiance: '',
+    var commentaires = [{
+        id:0,
+        noteGenerale:'4/5',
+        noteStage: '5/5',
+        noteAmbiance: '4/5',
+        commentaire: ''    
+    },{
+        id:1,
+        noteGenerale:'3/5',
+        noteStage: '4/5',
+        noteAmbiance: '3/5',
+        commentaire: ''    
+    },{
+        id:2,
+        noteGenerale:'4/5',
+        noteStage: '3/5',
+        noteAmbiance: '4/5',
         commentaire: ''    
     }];
     return {
     get: function(commentaireId) {
-      for (var i = 0; i < commentaire.length; i++) {
-        if (commentaire[i].id === parseInt(commentaireId)) {
-          return commentaire[i];
+      for (var i = 0; i < commentaires.length; i++) {
+        if (commentaires[i].id === parseInt(commentaireId)) {
+          return commentaires[i];
         }
       }
       return null;
@@ -146,9 +158,9 @@ angular.module('starter.services', [])
 
 .factory('Stagiaire', function(){
     var stagiaire = [{
-        id:'',
-        nom:'',
-        prenom: '',
+        id:0,
+        nom:'Robin',
+        prenom: 'Cornec',
         adresse: '',
         email: '',    
         password: ''
@@ -156,10 +168,25 @@ angular.module('starter.services', [])
 })
 
 .factory('Document', function(){
-    var document = [{
-        id:'',
-        libelle:'',
+    var documents = [{
+        id:0,
+        libelle:'cv',
         chemin: ''
     }];    
+    return {
+        add: function(document) {
+        },
+        remove: function(document) {
+          documents.splice(documents.indexOf(document), 1);
+        },
+        get: function(documentId)  {
+        for (var i = 0; i < documents.length; i++) {
+          if (documents[i].id === parseInt(documentId)) {
+            return documents[i];
+          }
+        }
+        return null;
+        }
+    };
 });
 

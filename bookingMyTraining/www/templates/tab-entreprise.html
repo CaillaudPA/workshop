@@ -14,10 +14,16 @@
             {{entreprise.url}} <br>
             {{entreprise.email}}  <br>          
         </p>
-
+        <div ng-repeat="commentaire in commentaires">
+            <p>
+                Note générale: {{commentaire.noteGenerale}} <br>
+                Note du stage: {{commentaire.noteStage}} <br>
+                Ambiance: {{commentaire.noteAmbiance}} <br>
+            </p>
+        </div>
         <i class="icon ion-chevron-right icon-accessory"></i>
 
-        <ion-option-button class="button-assertive" ng-click="remove()">
+        <ion-option-button class="button-assertive" ng-click="update(entreprise)">
           Modifier description
         </ion-option-button>
         <ion-option-button class="button-assertive" ng-click="add()">
